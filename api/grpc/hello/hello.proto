@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/kitex-contrib/registry-etcd/example/test/api/grpc/hello";
+
+package hello;
+
+service Greeter {
+  rpc SayHello(HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
